@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* using the function "puts" to print a statement */
+/**
+* main - Entry point
+* Description 'A program to practise using the "puts" function'
+* * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
