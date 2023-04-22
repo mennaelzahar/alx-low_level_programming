@@ -21,8 +21,11 @@ int main(void)
 			{
 				putchar((char)ch);
 				putchar((char)x);
-				putchar(',');
-				putchar((char)SPACE);
+				if (("%d%d, ch, x") != "89")
+				{
+					putchar(',');
+					putchar((char)SPACE);
+				}
 			}
 		}
 	}
