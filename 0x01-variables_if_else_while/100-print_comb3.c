@@ -21,7 +21,7 @@ int main(void)
 			{
 				putchar((char)ch);
 				putchar((char)x);
-				if (("%d%d, ch, x") != "89")
+				if (ch < 56)
 				{
 					putchar(',');
 					putchar((char)SPACE);
