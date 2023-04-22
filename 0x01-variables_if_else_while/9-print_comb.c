@@ -15,8 +15,11 @@ int main(void)
 	for (ch = 48 ; ch <= 57 ; ch++)
 	{
 		putchar((char)ch);
-		putchar(',');
-		putchar((char)SPACE);
+		if(ch < 57)
+		{
+			putchar(',');
+			putchar((char)SPACE);
+		}
 	}
 	putchar('\n');
 	return (0);
