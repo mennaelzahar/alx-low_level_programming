@@ -15,14 +15,18 @@ int main(void)
 
 	for (ch = 48 ; ch <= 57 ; ch++)
 	{
-		putchar((char)ch);
 		for (x = 48 ; x <= 57 ; x++)
-			if (ch != x)
-				putchar((char)x);
-		if (ch < 57)
 		{
-			putchar(',');
-			putchar((char)SPACE);
+			if (ch != x)
+			{
+				putchar((char)ch);
+				putchar((char)x);
+			}
+			if (ch < 56 && x < 57)
+			{
+				putchar(',');
+				putchar((char)SPACE);
+			}
 		}
 	}
 	putchar('\n');
