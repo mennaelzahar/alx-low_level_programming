@@ -21,14 +21,13 @@ int main(void)
 			{
 				putchar((char)ch);
 				putchar((char)x);
-			}
-			if (ch < 56 && x < 57)
-			{
-				putchar(',');
-				putchar((char)SPACE);
+				if (ch < 56 && x < 57)
+				{
+					putchar(',');
+					putchar((char)SPACE);
+				}
 			}
 		}
-	}
 	putchar('\n');
 	return (0);
 }
