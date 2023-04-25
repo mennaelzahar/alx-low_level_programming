@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Entry point
  * Description: 'prints _putchar'
@@ -9,11 +8,13 @@
 int main(void)
 {
 	char x[] = "_putchar";
+	int i;
+	int size = sizeof(x) - 1;
 
-	for (int i = 0; i < sizeof(x) - 1; i++)
+	for (i = 0; i < size; i++)
 	{
-		putchar(x[i]);
+		_putchar(x[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
