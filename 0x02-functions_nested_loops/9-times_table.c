@@ -23,14 +23,17 @@ void times_table(void)
 				_putchar('0' + tens);
 				_putchar('0' + ones);
 			}
-			else
+			else if (r >= 0 && j != 0)
+			{
+				_putchar(' ');
+				_putchar('0' + r);
+			}
+			else if (r == 0 && j == 0)
 				_putchar('0' + r);
 			if (j < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
-				if (r <= 9)
-					_putchar(' ');
 			}
 		}
 		_putchar('\n');
