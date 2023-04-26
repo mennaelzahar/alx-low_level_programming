@@ -6,16 +6,17 @@
  * print_to_98 - prints all natural numbers from n to 98
  * @n: the starting number
  */
-void print_to_98(int n) 
+void print_to_98(int n)
 {
 	int i;
 	char buffer[5];
-	
+
 	if (n <= 98)
 	{
 		for (i = n; i < 98; i++)
 		{
 			int j;
+
 			sprintf(buffer, "%d, ", i);
 			for (j = 0; buffer[j] != '\0'; j++)
 			{
