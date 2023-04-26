@@ -11,7 +11,7 @@
 int print_last_digit(int num)
 {
 	int r = abs(num) % 10;
-	
+
 	if (num == INT_MIN)
 		r = 8;
 	_putchar('0' + r);
