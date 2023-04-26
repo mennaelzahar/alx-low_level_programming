@@ -6,53 +6,37 @@
  * print_to_98 - prints all natural numbers from n to 98
  * @n: the starting number
  */
-void print_to_98(int n)
+void print_to_98(int n) 
 {
 	int i;
-
+	char buffer[5];
+	
 	if (n <= 98)
 	{
-		for (i = n; i <= 98; i++)
+		for (i = n; i < 98; i++)
 		{
-			int digit = i;
-
-			if (digit < 0)
+			int j;
+			sprintf(buffer, "%d, ", i);
+			for (j = 0; buffer[j] != '\0'; j++)
 			{
-				_putchar('-');
-				digit = -digit;
-			}
-
-			do {
-				_putchar(digit % 10 + '0');
-				digit /= 10;
-			} while (digit > 0);
-
-			if (i != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
+				_putchar(buffer[j]);
 			}
 		}
 	}
 	else
 	{
-		for (i = n; i >= 98; i--)
+		for (i = n; i > 98; i--)
 		{
-			int digit = i;
+			int j;
 
-			do {
-				_putchar(digit % 10 + '0');
-				digit /= 10;
-			} while (digit > 0);
-
-			if (i != 98)
+			sprintf(buffer, "%d, ", i);
+			for (j = 0; buffer[j] != '\0'; j++)
 			{
-				_putchar(',');
-				_putchar(' ');
+				_putchar(buffer[j]);
 			}
 		}
 	}
-
+	_putchar('9');
+	_putchar('8');
 	_putchar('\n');
 }
-
