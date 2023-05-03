@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * puts2_half - check the code.
+ * puts_half - check the code.
  * @str: pointer to char
  * Description: 'return string size'
  */
@@ -11,7 +11,7 @@
 void puts_half(char *str)
 {
 	int i;
-	int size = strlen(str);	
+	int size = strlen(str);
 	int n;
 
 	if ((size & 1) == 0)
