@@ -2,28 +2,31 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * cap_string - check the code
- * @a: pointer to char
+ * @str: pointer to char
  * Return: char *
  * Description: string concatination
  */
-char *cap_string(char *a)
+char *cap_string(char *str)
 {
 	int i;
-	int size = strlen(a);
-	char *separators = ",;.!?\"(){} \t\n";
+	int len = strlen(str);
+	int cap_next = 1;
 
-	for (i = 1; i < size; i++)
+	for (i = 0; i < len; i++)
 	{
-		char c = a[i - 1];
-
-		if (strchr(separators, c) != NULL)
+		if (isspace(str[i]) || ispunct(str[i])) 
 		{
-			if ((a[i] >= 97) && (a[i] <= 122))
-				a[i] = a[i] - 32;
+			cap_next = 1;
+		}
+		else if (cap_next)
+		{
+			str[i] = toupper(str[i]);
+			cap_next = 0;
 		}
 	}
-	return (a);
+	return (str);
 }
