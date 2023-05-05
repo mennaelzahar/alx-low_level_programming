@@ -26,7 +26,7 @@ char *cap_string(char *str)
 				break;
 			}
 		}
-		if (j == num_separators) 
+		if (j == num_separators)
 		{
 			if (cap_next)
 			{
